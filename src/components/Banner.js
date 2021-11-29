@@ -2,7 +2,7 @@ import React from 'react'
 import "../fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css"
 import Sniper from './out/Sniper'
 import './sass/App.sass'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
 function Banner() {
     const [changeColor, setChangeColor] = useState(true)

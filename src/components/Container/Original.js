@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState, useRef } from 'react'
 import Image from './Image'
 
+
+
 function Original({ ORIGINAL__FILM }) {
     const [original, setOriginal] = useState([])
 
