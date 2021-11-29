@@ -10,8 +10,8 @@ function Image({ poster_path, title, original_title, overview, release_date, vot
     const [render, setRender] = useState(true)
     const [listen, setListen] = useState()
 
-    const listRef = useRef()
     const listItem = useRef()
+    const listRef = useRef()
 
     const dragStart = (e) => {
         
@@ -21,15 +21,16 @@ function Image({ poster_path, title, original_title, overview, release_date, vot
     }
 
     const dragOver = () => {
+        const image = document.querySelector('.image')
         let distance = listItem.current.getBoundingClientRect().x  
         console.log(distance)
         if(listen < distance) {
-            listRef.current.style.transform = `translateX(${-1000 + distance - 50}px)`
-            listRef.current.style.transition = '0.5s'
+            image.style.transform = `translateX(${-1000 + distance - 50}px)`
+            image.style.transition = '0.5s'
         }
         if(listen > distance) {
-            listRef.current.style.transform = `translateX(${1000 + distance - 50}px)`
-            listRef.current.style.transition = '0.5s'
+            image.style.transform = `translateX(${1000 + distance - 50}px)`
+            image.style.transition = '0.5s'
         }
     }
 
@@ -37,9 +38,8 @@ function Image({ poster_path, title, original_title, overview, release_date, vot
         <div 
             className="image"
             onDragStart={dragStart}
-            onDragOver={dragOver}
-            ref={listRef}
-            >
+            onDragEnd={dragOver}
+        >
             <img
                 ref={listItem}
                 className="image-main" 
@@ -47,7 +47,7 @@ function Image({ poster_path, title, original_title, overview, release_date, vot
                 height="450px" 
                 src={IMG_API + poster_path} 
                 alt={title}
-            />
+        />
         </div>
     )
 }
