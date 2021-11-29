@@ -1,0 +1,40 @@
+@import './App'
+.sniper
+    width: 161px
+    height: 370px
+    position: absolute
+    background-color: #000
+    opacity: 0.9
+    border: 0.5px solid #ccc
+    top: 41px
+    left: 73px
+    display: none
+    .sniper__class
+        position: absolute
+        top: 18px
+        .sniper__block
+            display: flex
+            margin-bottom: 55px
+            .click 
+                margin-left: 13px
+                margin-right: 8px
+            .low0
+                @extend %block
+                background-color: #40a8e4
+            .low1
+                @extend %block
+                background-color: #e69130
+            .low2
+                @extend %block
+                background-color: #7be660
+        .across
+            background-color: white
+            height: 1px
+            width: 162px
+            position: absolute
+            top: 206px
+        .sniper__account
+            font-size: 12px
+            margin-bottom: 22px
+            margin-left: 18px
+            color: white

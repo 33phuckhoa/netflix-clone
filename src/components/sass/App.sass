@@ -1,0 +1,221 @@
+%block
+    width: 30px
+    border-radius: 6px
+    height: 30px
+
+html
+    background-color: #111111
+
+.header
+    width: 100%
+    height: 671px
+    position: relative
+    background-color: #111111
+    left: 0
+    top: 0
+    .header__ifarme 
+        width: 100%
+        height: 667px
+        position: absolute
+        top: 0
+        left: 0
+        border: none
+
+
+.banner 
+    background-color: transparent
+    width: 100%
+    height: 670px
+    position: absolute
+    top: 0
+    opacity: 1
+    color: white
+    .banner__navbar
+        position: fixed
+        left: 0px
+        top: 0px
+        height: 94px
+        width: 1373px
+        background-color: transparent
+        z-index: 6
+        .banner__netflix
+            width: 145px
+            position: absolute
+            left: 32px
+            top: 22px
+        .banner__control
+            display: flex
+            position: absolute
+            left: 185px
+            top: 40px
+            font-size: 14px
+            .banner__control--elem 
+                padding: 0 10px
+                &:hover
+                    cursor: pointer
+                    opacity: 0.8
+        .banner__local
+            display: flex
+            left: 926px
+            top: 41px
+            position: absolute
+            .banner__local--kid
+                padding: 0 15px
+                font-size: 15px
+                &:hover
+                    cursor: pointer
+                    opacity: 0.8
+                
+    .banner__item
+        font-size: 54px
+        margin-top: 186px
+        margin-left: 54px
+        .banner__button
+            width: 128px
+            height: 40px
+            border-radius: 5px
+            border: none
+            display: flex
+            &:hover
+                cursor: pointer
+        .block 
+            margin-left: 20px
+            width: 152px
+            height: 40px
+            font-style: italic
+            background-color: #b8b4b4
+            color: white
+            &:hover
+                background-color: black
+            .hand 
+                margin-left: 21px
+                margin-top: 10px
+                font-size: 18px
+                width: 28px
+            .flex 
+                margin-top: 11px
+            
+
+    .button__int
+        margin-top: 73px
+        height: 40px
+        display: flex
+        .flex1 
+            margin-top: 11px
+            margin-left: 8px
+        .cursor
+            margin-left: 21px
+            margin-top: 10px
+            font-size: 18px
+    .font 
+        font-size: 20px
+        width: 637px
+        margin-top: 86px
+
+    .banner__see
+        @extend %block
+        background-color: #c9c74e
+        margin-top: -3px
+        margin-left: 13px
+        margin-right: 9px
+        &:hover
+            cursor: pointer
+            .sniper
+                display: flex !important
+
+    .banner__see
+        &:hover    
+            .sniper
+                display: flex !important
+
+.low 
+    font-size: 27px 
+    margin-top: -9px
+
+
+
+.open
+    display: flex !important
+
+.close 
+    display: none !important
+            
+.banner__local--main
+    display: flex
+    position: absolute
+    left: 53px    
+
+.banner__local--search
+    width: 274px
+    height: 32px
+    background-color: transparent
+    position: absolute
+    right: -34px
+    top: -5px
+    .ling
+        margin-top: 6px
+        margin-left: 248px
+        font-size: 21px
+        color: white
+        position: absolute
+        top: 1px 
+    .appear
+        background-color: transparent
+        outline: none
+        border: none
+        color: white
+        position: absolute
+        left: 274px
+        top: 7px
+        display: none
+
+.ling
+    &:hover
+        cursor: pointer
+    &:checked
+        position: absolute
+        left: -245px
+        transition: 0.9s
+    
+.move 
+    display: flex !important
+    position: absolute !important
+    left: 30px !important
+    transition: all 2s
+
+.search__link 
+    appearance: none
+    color: white
+    font-size: 21px
+
+.border
+    border: 1px solid #ccc
+    background-color: black
+
+
+    
+//MUte
+.banner__mute
+    border: 1px solid white
+    color: white
+    font-size: 30px
+    width: 47px
+    height: 47px
+    border-radius: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: 725px
+    margin-top: 31px
+    &:hover
+        cursor: pointer
+    .banner__vol
+        display: none
+        
+
+.switch
+    background-color: black !important
+    transition: all 2s
+
+
+        
