@@ -14,13 +14,11 @@ function Original({ ORIGINAL__FILM }) {
     const handleCLick = (direction) => {
         let distance = listRef.current.getBoundingClientRect().x - 50
         if( direction === 'left') {
-            setCount(count - 1)
             listRef.current.style.transform = `translateX(${1000 + distance}px)`
             listRef.current.style.transition = '0.5s'
         }
 
         if(direction === "right") {
-            setCount(count + 1)
             listRef.current.style.transform = `translateX(${-1000 + distance}px)`
             listRef.current.style.transition = '0.5s'
         }
@@ -44,7 +42,6 @@ function Original({ ORIGINAL__FILM }) {
             <div className="container__main" ref={listRef}>
                 {original.length > 0 && original.map((arr) => (
                     <Image 
-                        listRef={listRef}
                         key={arr.id}
                         {...arr}
                     />
