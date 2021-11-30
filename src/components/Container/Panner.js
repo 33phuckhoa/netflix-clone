@@ -6,6 +6,7 @@ import '../sass/Panner.sass'
 
 function Panner({ ORIGINAL__FILM }) {
     const [original, setOriginal] = useState([])
+    const [array, setArray] = useState([])
     const [count, setCount] = useState(0)
 
     const listRef = useRef()
@@ -29,12 +30,8 @@ function Panner({ ORIGINAL__FILM }) {
         fetch(ORIGINAL__FILM)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                const document = data.results.concat(data.results)
-                const report = document.concat(document)
-                const learn = report.concat(report)
-                const goes = learn.concat(learn)
-                setOriginal(goes.concat(goes))
+                setOriginal(data.results)
+                setOriginal([...original, ...data.results])
             })
     }, [])    
     return (

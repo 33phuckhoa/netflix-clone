@@ -6,8 +6,7 @@ import Image from './Image'
 
 function Original({ ORIGINAL__FILM }) {
     const [original, setOriginal] = useState([])
-
-    const [count, setCount] = useState(0)
+    const [char, setChar] = useState([])
 
     const listRef = useRef()
 
@@ -29,19 +28,17 @@ function Original({ ORIGINAL__FILM }) {
        fetch(ORIGINAL__FILM)
             .then(res => res.json())
             .then(data => {
-                const document = data.results.concat(data.results)
-                const report = document.concat(document)
-                const goes = report.concat(report)
-                const value = goes.concat(goes)
-                setOriginal(value.concat(value)) 
+                // setOriginal(data.results)
+                setOriginal([...original, ...data.results])
             })
-    }, [])    
+    },[])    
     return (
         <div className="container__first">
             <i onClick={() => handleCLick("left")} className="left icofont-thin-left color"></i>
             <div className="container__main" ref={listRef}>
                 {original.length > 0 && original.map((arr) => (
                     <Image 
+                        listRef={listRef}
                         key={arr.id}
                         {...arr}
                     />

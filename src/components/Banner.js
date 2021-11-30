@@ -2,10 +2,13 @@ import React from 'react'
 import "../fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css"
 import Sniper from './out/Sniper'
 import './sass/App.sass'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+
+
 
 function Banner() {
     const [changeColor, setChangeColor] = useState(true)
+    const [content, setContent] = useState('')
    
     const checkInput = () => {
         const check = document.querySelector(".js-check")
@@ -20,15 +23,6 @@ function Banner() {
             strange.classList.remove("border")
             appear.classList.remove("move")
         }
-    }
-
-
-    useEffect(() => {
-
-    }, [])
-
-    const onMute = () => {
-        
     }
 
     window.addEventListener('scroll', () => {
@@ -57,7 +51,7 @@ function Banner() {
                     <div className="banner__local">
                         <div className="js-strange banner__local--search">
                             <input onClick={checkInput} type="checkbox" class="js-check search__link ling fas fa-search"></input>
-                            <input type="text" className="appear" placeholder="Titles,genres,people" />
+                            <input type="text" className="appear" placeholder="Titles,genres,people" onChange={e => setContent(e.target.value)}/>
                         </div>
                         <div className="banner__local--main">
                             <div className="banner__local--kid">KIDS</div>
@@ -81,7 +75,7 @@ function Banner() {
                         <h3 className="hand">MyList</h3>
                     </button>
                     <div className="banner__mute">
-                        <i onClick={onMute} class="banner__mu fas fa-volume-mute"></i>
+                        <i class="banner__mu fas fa-volume-mute"></i>
                         <i class="banner__vol fas fa-volume-up"></i>
                     </div>
                 </div>
