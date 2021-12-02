@@ -28,8 +28,7 @@ function Original({ ORIGINAL__FILM }) {
        fetch(ORIGINAL__FILM)
             .then(res => res.json())
             .then(data => {
-                // setOriginal(data.results)
-                setOriginal([...original, ...data.results])
+               setOriginal([...original, ...original, ...data.results])
             })
     },[])    
     return (
