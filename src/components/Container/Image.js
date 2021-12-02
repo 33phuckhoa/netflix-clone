@@ -46,21 +46,6 @@ function Image({ poster_path, title, original_title, overview, release_date, vot
                     alt={title}
                 />
             </div>
-            <div className="overall">
-                <img src={IMG_API + backdrop_path}/>
-                <div className="overall__main">
-                    <h1 className="overall_name">{original_title}</h1>
-                    <h3 className="overall__core">
-                        <h3 className="overall__rating">Rating: {vote_average}%</h3>
-                        <h3 className="overall__common">Release date: {release_date} Runtime: m</h3>
-                        <p overall__overview>{overview}</p>
-                    </h3>
-                </div>
-                <div className="overall__button">
-                    <i class="overall__button--main fas fa-play">PLAY</i>
-                    <i class="overall__button--main fas fa-plus">MY LIST</i>
-                </div>
-            </div>
 
         </div>
     )
